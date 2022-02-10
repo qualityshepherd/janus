@@ -1,0 +1,28 @@
+{
+  "name": "janus",
+  "version": "1.0.0",
+  "description": "Example e2e tests using TestCafe",
+  "engines": {
+    "node": ">=16"
+  },
+  "standard": {
+    "globals": [
+      "t",
+      "fixture",
+      "test"
+    ]
+  },
+  "scripts": {
+    "testcafe": "testcafe",
+    "test": "npm run testcafe chrome tests/ -- --skipJsErrors",
+    "ci": "npm run testcafe -- -c 2 chrome:headless tests/",
+    "safari": "npm run testcafe safari tests/",
+    "firefox": "npm run testcafe firefox tests/",
+    "pretty": "npx standard --fix"
+  },
+  "author": "brine",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "testcafe": "^1.18.3"
+  }
+}
