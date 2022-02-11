@@ -1,4 +1,4 @@
-import { Selector as $, t } from 'testcafe'
+import { Selector as $ } from 'testcafe'
 import basePage from './basePage'
 
 const amazonPage = {

@@ -23,14 +23,14 @@ const basePage = {
    * @return {array}
    */
   async getTextOfAllElements (selector) {
-    const selectorTexts = [];
-    const count = await selector.count;
+    const selectorTexts = []
+    const count = await selector.count
 
     for (let i = 0; i < count; i += 1) {
       // collect all the selector texts...
-      selectorTexts.push(selector.nth(i).textContent);
+      selectorTexts.push(selector.nth(i).textContent)
     }
-    return await Promise.all(selectorTexts);
+    return await Promise.all(selectorTexts)
   }
 }
 export default basePage
