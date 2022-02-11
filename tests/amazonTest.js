@@ -9,7 +9,7 @@ const searchFor = [
 ]
 
 searchFor.forEach(async text => {
-  test(`should search results for ${text} prices over $100`, async t => {
+  test(`search results for ${text} should be over $100`, async t => {
     await amazonPage.goto(`s?k=${text}`)
 
     await t.expect(await amazonPage.allPricesOver$100()).ok()
