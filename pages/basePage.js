@@ -1,10 +1,7 @@
 import { t } from 'testcafe'
-import minimist from 'minimist'
 
 // get env from cli or use default
-const args = minimist(process.argv.slice(2))
-const env = args.env || 'https://amazon.com/'
-const baseUrl = env.endsWith('/') ? env : `${env}/` // ensure ending slash
+const baseUrl = process.argv['env'] || 'https://amazon.com/'
 
 const basePage = {
   baseUrl,

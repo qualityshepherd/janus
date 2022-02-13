@@ -22,7 +22,6 @@
   },
   "author": "brine",
   "dependencies": {
-    "minimist": "^1.2.5",
     "testcafe": "^1.18.3"
   }
 }
